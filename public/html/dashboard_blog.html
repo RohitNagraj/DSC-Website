@@ -4,10 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <script src="jQuery.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <script src="dashboard.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
   <link rel="shortcut icon" type="image/png" href="../images/logo2.png" />
   <link rel="shortcut icon" type="image/png" href="../images/logo2.png" />
@@ -65,6 +66,7 @@
     <section id="blog_post">
       <br><br>
       <div class="container">
+        <form onsubmit="submitData()">
         <div class="form-group">
           <fieldset class="the-fieldset">
             <legend class="the-legend">Update Blog</legend>
@@ -97,9 +99,10 @@
               </form>
 
             </form><br>
-            <button class="btn btn-primary" style="float: right" type="subit" onclick="submitData()" id="submit">Publish</button>
+            <button class="btn btn-primary" style="float: right" type="subit" id="submit">Publish</button>
           </fieldset>
         </div>
+        </form>
       </div>
     </section>
     <section>

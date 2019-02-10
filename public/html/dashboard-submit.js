@@ -29,8 +29,11 @@ console.log(descriptionBlog);
 console.log(imageBlog);
 console.log(additionalFileBlog); 
 
-ref.push(titleBlog);
-ref.push(descriptionBlog);
-ref.push(imageBlog);
-ref.push(additionalFileBlog);
+var myObj = {
+    title: titleBlog,
+    description: descriptionBlog,
+    image: imageBlog,
+    additionalFile: additionalFileBlog
+}
+ref.push(myObj);
 }
