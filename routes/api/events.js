@@ -40,12 +40,18 @@ const { ensureAuthenticated } = require('../../config/auth');
 // @route   GET /events
 // @desc    Get all events
 // @access  Public
-router.get('/', (req, res) => {
+router.get('/events', (req, res) => {
     Event.find()
         .sort({ date: -1 })
-        .then(events => res.json(events))
+        //.then(events => res.json(events))
+        .then(res.render("event.ejs",{
+            name:Event.find()[0]["contact"]["name"],
+            date:Event.find()[0]["date"]
+            
+        }))
         .catch(err => res.status(404).json(err))
 });
+
 
 // @route   POST api/events
 // @desc    Add new post
